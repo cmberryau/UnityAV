@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Logging">
+      <UniqueIdentifier>{74d88376-57dd-4195-ba16-cb3186311eb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Logging">
+      <UniqueIdentifier>{1332746a-478f-4b41-9688-fecaff0683b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rendering">
+      <UniqueIdentifier>{0324b4b6-fe29-435a-b49b-be32feeaa8ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rendering">
+      <UniqueIdentifier>{131c369e-a54c-436c-9493-cdfa076fddbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Media">
+      <UniqueIdentifier>{a4b2de5b-ebd5-4eec-902c-784533ea649e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Media">
+      <UniqueIdentifier>{7a4d4d7e-0341-4b2d-8de9-ce9c3cc23463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Collections">
+      <UniqueIdentifier>{41568211-e508-4906-aaf9-085ff705c2bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Unity">
+      <UniqueIdentifier>{878f9ad8-646c-4719-b9e9-3c9238ea9e1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Unity">
+      <UniqueIdentifier>{3d72ce60-34ee-4d53-9933-4b5ecc42d787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Media\AVLib">
+      <UniqueIdentifier>{40e264f8-f931-4f0a-b657-4ee01e5c1dc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Media\Live555">
+      <UniqueIdentifier>{f7e88b3d-cd73-4d93-92e9-b769f3a0ec6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Media\AVLib">
+      <UniqueIdentifier>{6b259957-90b6-4dc7-9b7a-3ceb01f0d6eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Media\Live555">
+      <UniqueIdentifier>{414025b5-66ee-4d0a-bfe0-7b9f4f0d888d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\TextureWriter.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\D3D11TextureWriter.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\NullTextureWriter.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="FixedSizeQueue.h">
+      <Filter>Header Files\Collections</Filter>
+    </ClInclude>
+    <ClInclude Include="UnityConnection.h">
+      <Filter>Header Files\Unity</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoFrame.h">
+      <Filter>Header Files\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="PixelFormat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IFrameVisitor.h">
+      <Filter>Header Files\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="IVideoClient.h">
+      <Filter>Header Files\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="Logging\Debug.h">
+      <Filter>Header Files\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Frame.h">
+      <Filter>Header Files\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="IVideoDescription.h">
+      <Filter>Header Files\Media</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLibDecoder.h">
+      <Filter>Header Files\Media\AVLib</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLibFrame.h">
+      <Filter>Header Files\Media\AVLib</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLibPacket.h">
+      <Filter>Header Files\Media\AVLib</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLibPlayer.h">
+      <Filter>Header Files\Media\AVLib</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLibUtil.h">
+      <Filter>Header Files\Media\AVLib</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLibVideoDecoder.h">
+      <Filter>Header Files\Media\AVLib</Filter>
+    </ClInclude>
+    <ClInclude Include="IAVLibSource.h">
+      <Filter>Header Files\Media\AVLib</Filter>
+    </ClInclude>
+    <ClInclude Include="IAVLibDecoderVisitor.h">
+      <Filter>Header Files\Media\AVLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Live555RTSPClient.h">
+      <Filter>Header Files\Media\Live555</Filter>
+    </ClInclude>
+    <ClInclude Include="Live555Util.h">
+      <Filter>Header Files\Media\Live555</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLibFileSource.h">
+      <Filter>Header Files\Media\AVLib</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLibPacketRecycler.h">
+      <Filter>Header Files\Media\AVLib</Filter>
+    </ClInclude>
+    <ClInclude Include="AVLibRTSPSource.h">
+      <Filter>Header Files\Media\AVLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Live555Packet.h">
+      <Filter>Header Files\Media\Live555</Filter>
+    </ClInclude>
+    <ClInclude Include="Live555PacketRecycler.h">
+      <Filter>Header Files\Media\Live555</Filter>
+    </ClInclude>
+    <ClInclude Include="Live555PacketSink.h">
+      <Filter>Header Files\Media\Live555</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\D3D11TextureWriter.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\TextureWriter.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="Rendering\NullTextureWriter.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="UnityConnection.cpp">
+      <Filter>Source Files\Unity</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoFrame.cpp">
+      <Filter>Source Files\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="Logging\Debug.cpp">
+      <Filter>Source Files\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="Frame.cpp">
+      <Filter>Source Files\Media</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLibDecoder.cpp">
+      <Filter>Source Files\Media\AVLib</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLibFrame.cpp">
+      <Filter>Source Files\Media\AVLib</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLibPacket.cpp">
+      <Filter>Source Files\Media\AVLib</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLibPlayer.cpp">
+      <Filter>Source Files\Media\AVLib</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLibUtil.cpp">
+      <Filter>Source Files\Media\AVLib</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLibVideoDecoder.cpp">
+      <Filter>Source Files\Media\AVLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Live555RTSPClient.cpp">
+      <Filter>Source Files\Media\Live555</Filter>
+    </ClCompile>
+    <ClCompile Include="Live555Util.cpp">
+      <Filter>Source Files\Media\Live555</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLibFileSource.cpp">
+      <Filter>Source Files\Media\AVLib</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLibPacketRecycler.cpp">
+      <Filter>Source Files\Media\AVLib</Filter>
+    </ClCompile>
+    <ClCompile Include="AVLibRTSPSource.cpp">
+      <Filter>Source Files\Media\AVLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Live555Packet.cpp">
+      <Filter>Source Files\Media\Live555</Filter>
+    </ClCompile>
+    <ClCompile Include="Live555PacketSink.cpp">
+      <Filter>Source Files\Media\Live555</Filter>
+    </ClCompile>
+    <ClCompile Include="Live555PacketRecycler.cpp">
+      <Filter>Source Files\Media\Live555</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnityAV.Native.def">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

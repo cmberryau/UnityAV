@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5F9C507E-0B7A-48EE-A4B0-28BA4C4FD95B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>UnityAVNative</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="UnityAV.PlatformIndependent.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="UnityAV.PlatformIndependent.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="UnityAV.PlatformIndependent.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="UnityAV.PlatformIndependent.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Output\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)Intermediate\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Output\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)Intermediate\$(Configuration)\$(Platform)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(ProjectDir)Intermediate\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)Output\$(Configuration)\$(Platform)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(ProjectDir)Intermediate\$(Configuration)\$(Platform)\</IntDir>
+    <OutDir>$(SolutionDir)Output\$(Configuration)\$(Platform)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;UNITYAVNATIVE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\live\groupsock\include\;$(SolutionDir)Dependencies\live\liveMedia\include\;$(SolutionDir)Dependencies\live\UsageEnvironment\include\;$(SolutionDir)Dependencies\live\BasicUsageEnvironment\include\;$(ProjectDir);$(UnityInstallDir)Editor\Data\PluginAPI\;$(SolutionDir)dependencies\ffmpeg_x86\include\</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>UnityAV.Native.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\live\lib\$(Configuration)\$(Platform)\;$(SolutionDir)dependencies\ffmpeg_x86\bin\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;BasicUsageEnvironment.lib;avcodec.lib;avutil.lib;avformat.lib;swscale.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;UNITYAVNATIVE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\live\groupsock\include\;$(SolutionDir)Dependencies\live\liveMedia\include\;$(SolutionDir)Dependencies\live\UsageEnvironment\include\;$(SolutionDir)Dependencies\live\BasicUsageEnvironment\include\;$(ProjectDir);$(UnityInstallDir)Editor\Data\PluginAPI\;$(SolutionDir)dependencies\ffmpeg_x86_64\include\</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>UnityAV.Native.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\live\lib\$(Configuration)\$(Platform)\;$(SolutionDir)dependencies\ffmpeg_x86_64\bin\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;BasicUsageEnvironment.lib;avcodec.lib;avutil.lib;avformat.lib;swscale.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(OutputPath)$(MSBuildProjectName).dll" "$(SolutionDir)..\UnityAVExample\Assets\UnityAV\Plugins\Native\Windows\x64\" /s /i /y
+xcopy "$(OutputPath)$(MSBuildProjectName).pdb" "$(SolutionDir)..\UnityAVExample\Assets\UnityAV\Plugins\Native\Windows\x64\" /s /i /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;UNITYAVNATIVE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\live\groupsock\include\;$(SolutionDir)Dependencies\live\liveMedia\include\;$(SolutionDir)Dependencies\live\UsageEnvironment\include\;$(SolutionDir)Dependencies\live\BasicUsageEnvironment\include\;$(ProjectDir);$(UnityInstallDir)Editor\Data\PluginAPI\;$(SolutionDir)dependencies\ffmpeg_x86\include\</AdditionalIncludeDirectories>
+      <SDLCheck>false</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>UnityAV.Native.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\live\lib\$(Configuration)\$(Platform)\;$(SolutionDir)dependencies\ffmpeg_x86\bin\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;BasicUsageEnvironment.lib;avcodec.lib;avutil.lib;avformat.lib;swscale.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;UNITYAVNATIVE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\live\groupsock\include\;$(SolutionDir)Dependencies\live\liveMedia\include\;$(SolutionDir)Dependencies\live\UsageEnvironment\include\;$(SolutionDir)Dependencies\live\BasicUsageEnvironment\include\;$(ProjectDir);$(UnityInstallDir)Editor\Data\PluginAPI\;$(SolutionDir)dependencies\ffmpeg_x86_64\include\</AdditionalIncludeDirectories>
+      <SDLCheck>
+      </SDLCheck>
+      <OmitFramePointers>true</OmitFramePointers>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ControlFlowGuard>false</ControlFlowGuard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <ModuleDefinitionFile>UnityAV.Native.def</ModuleDefinitionFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\live\lib\$(Configuration)\$(Platform)\;$(SolutionDir)dependencies\ffmpeg_x86_64\bin\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ws2_32.lib;groupsock.lib;liveMedia.lib;UsageEnvironment.lib;BasicUsageEnvironment.lib;avcodec.lib;avutil.lib;avformat.lib;swscale.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(OutputPath)$(MSBuildProjectName).dll" "$(SolutionDir)..\UnityAVExample\Assets\UnityAV\Plugins\Native\Windows\x64\" /s /i /y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AVLibFileSource.h" />
+    <ClInclude Include="AVLibPacketRecycler.h" />
+    <ClInclude Include="AVLibRTSPSource.h" />
+    <ClInclude Include="Frame.h" />
+    <ClInclude Include="IAVLibDecoderVisitor.h" />
+    <ClInclude Include="IAVLibSource.h" />
+    <ClInclude Include="IFrameVisitor.h" />
+    <ClInclude Include="IVideoDescription.h" />
+    <ClInclude Include="IVideoClient.h" />
+    <ClInclude Include="Live555PacketSink.h" />
+    <ClInclude Include="Live555Packet.h" />
+    <ClInclude Include="Live555PacketRecycler.h" />
+    <ClInclude Include="Live555RTSPClient.h" />
+    <ClInclude Include="Live555Util.h" />
+    <ClInclude Include="PixelFormat.h" />
+    <ClInclude Include="TextureClient.h" />
+    <ClInclude Include="VideoFrame.h" />
+    <ClInclude Include="AVLibPacket.h" />
+    <ClInclude Include="AVLibPlayer.h" />
+    <ClInclude Include="AVLibFrame.h" />
+    <ClInclude Include="AVLibUtil.h" />
+    <ClInclude Include="AVLibDecoder.h" />
+    <ClInclude Include="AVLibVideoDecoder.h" />
+    <ClInclude Include="FixedSizeQueue.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Logging\Debug.h" />
+    <ClInclude Include="Rendering\D3D11TextureWriter.h" />
+    <ClInclude Include="Rendering\NullTextureWriter.h" />
+    <ClInclude Include="Rendering\TextureWriter.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="UnityConnection.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AVLibPacket.cpp" />
+    <ClCompile Include="AVLibPacketRecycler.cpp" />
+    <ClCompile Include="AVLibPlayer.cpp" />
+    <ClCompile Include="AVLibFrame.cpp" />
+    <ClCompile Include="AVLibDecoder.cpp" />
+    <ClCompile Include="AVLibFileSource.cpp" />
+    <ClCompile Include="AVLibRTSPSource.cpp" />
+    <ClCompile Include="AVLibUtil.cpp" />
+    <ClCompile Include="AVLibVideoDecoder.cpp" />
+    <ClCompile Include="Frame.cpp" />
+    <ClCompile Include="Live555PacketSink.cpp" />
+    <ClCompile Include="Live555Packet.cpp" />
+    <ClCompile Include="Live555PacketRecycler.cpp" />
+    <ClCompile Include="Live555RTSPClient.cpp" />
+    <ClCompile Include="Live555Util.cpp" />
+    <ClCompile Include="TextureClient.cpp" />
+    <ClCompile Include="VideoFrame.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Logging\Debug.cpp" />
+    <ClCompile Include="Rendering\D3D11TextureWriter.cpp" />
+    <ClCompile Include="Rendering\NullTextureWriter.cpp" />
+    <ClCompile Include="Rendering\TextureWriter.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="UnityConnection.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnityAV.Native.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

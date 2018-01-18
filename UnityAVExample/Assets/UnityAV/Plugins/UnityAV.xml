@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnityAV</name>
+    </assembly>
+    <members>
+        <member name="T:UnityAV.NativeInitializer">
+            <summary>
+            Responsible for the initialization of common native plugin components 
+            </summary>
+        </member>
+        <member name="M:UnityAV.NativeInitializer.Initialize(UnityEngine.MonoBehaviour)">
+            <summary>
+            Initializes the native components, repeated calls will be safely ignored
+            </summary>
+            <param name="monoBehaviour">The MonoBehaviour to piggyback on for a few
+            required calls</param>
+        </member>
+        <member name="M:UnityAV.NativeInitializer.Teardown">
+            <summary>
+            Tears down the native components, repeated calls will be safely ignored
+            </summary>
+        </member>
+        <member name="T:UnityAV.MediaPlayer">
+            <summary>
+            Responsible for playing streamed media
+            </summary>
+        </member>
+        <member name="F:UnityAV.MediaPlayer.Uri">
+            <summary>
+            The uri of the media to stream
+            </summary>
+        </member>
+        <member name="F:UnityAV.MediaPlayer.Loop">
+            <summary>
+            Should the media be looped?
+            </summary>
+        </member>
+        <member name="F:UnityAV.MediaPlayer.AutoPlay">
+            <summary>
+            Should the media play as soon as it's loaded?
+            </summary>
+        </member>
+        <member name="F:UnityAV.MediaPlayer.Width">
+            <summary>
+            The width of the texture in pixels
+            </summary>
+        </member>
+        <member name="F:UnityAV.MediaPlayer.Height">
+            <summary>
+            The height of the texture in pixels
+            </summary>
+        </member>
+        <member name="F:UnityAV.MediaPlayer.TargetMaterial">
+            <summary>
+            The material to apply any streaming video to
+            </summary>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.GetPlayer(System.String,System.IntPtr)">
+            <summary>
+            Gets a media player
+            </summary>
+            <param name="uri">The uri to the media to play</param>
+            <param name="texturePointer">The texture pointer to stream to</param>
+            <returns>Non-negative unique id of the player, negative on failure</returns>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.ReleasePlayer(System.Int32)">
+            <summary>
+            Releases a media player
+            </summary>
+            <param name="id">The id of the player to release</param>
+            <returns>Non-negative value on success, negative on failure</returns>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.Duration(System.Int32)">
+            <summary>
+            Evaluates the duration of a media player
+            </summary>
+            <param name="id">The player id to evaluate</param>
+            <returns>The duration of the player in seconds, negative on failure</returns>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.Time(System.Int32)">
+            <summary>
+            Evaluates the current time of a media player from start of play
+            </summary>
+            <param name="id">The player id to evaluate</param>
+            <returns>The current time of the player in seconds from start of play, 
+            negative on failure</returns>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.Play(System.Int32)">
+            <summary>
+            Begins or resumes a media players playback
+            </summary>
+            <param name="id">The player id to evaluate</param>
+            <returns>Non-negative value on success, negative on failure</returns>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.Stop(System.Int32)">
+            <summary>
+            Stops a players media playback
+            </summary>
+            <param name="id">The player id to stop</param>
+            <returns>Non-negative value on success, negative on failure</returns>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.Seek(System.Int32,System.Double)">
+            <summary>
+            Seeks a media player
+            </summary>
+            <param name="id">The player id to evaluate</param>
+            <param name="time">The time to seek to</param>
+            <returns>Non-negative value on success, negative on failure</returns>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.SetLoop(System.Int32,System.Boolean)">
+            <summary>
+            Sets a media player to loop or not
+            </summary>
+            <param name="id">The player id to set looping for</param>
+            <param name="loop">True if the player should loop, false if not</param>
+            <returns>Non-negative value on success, negative on failure</returns>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.Play">
+            <summary>
+            Begins or resumes playback
+            </summary>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.Stop">
+            <summary>
+            Stops playback
+            </summary>
+            <exception cref="T:System.InvalidOperationException">Thrown if MediaPlayer failed to 
+            obtain a native player</exception>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.Duration">
+            <summary>
+            Evaluates the duration
+            </summary>
+            <returns>The duration in seconds</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if MediaPlayer failed to 
+            obtain a native player</exception>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.Time">
+            <summary>
+            Evaluates the current time
+            </summary>
+            <returns>The time in seconds since playback start</returns>
+            <exception cref="T:System.InvalidOperationException">Thrown if MediaPlayer failed to 
+            obtain a native player</exception>
+        </member>
+        <member name="M:UnityAV.MediaPlayer.Seek(System.Double)">
+            <summary>
+            Seeks the playback
+            </summary>
+            <param name="time">The time to seek to in seconds</param>
+            <exception cref="T:System.InvalidOperationException">Thrown if MediaPlayer failed to 
+            obtain a native player</exception>
+        </member>
+    </members>
+</doc>
